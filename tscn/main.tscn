@@ -16,7 +16,7 @@ size = Vector2(2.50001, 1.79012)
 [node name="Paddle" parent="." instance=ExtResource("1_qe3g6")]
 
 [node name="Ball" type="Node2D" parent="."]
-position = Vector2(576, 432)
+position = Vector2(576, 575)
 scale = Vector2(28.1249, 28.125)
 
 [node name="Ball" type="Sprite2D" parent="Ball"]

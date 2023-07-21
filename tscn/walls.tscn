@@ -17,7 +17,6 @@ scale = Vector2(0.496483, 0.853794)
 shape = SubResource("RectangleShape2D_7ad7j")
 
 [node name="Wall" type="Sprite2D" parent="Wall"]
-scale = Vector2(1, 1)
 texture = SubResource("CanvasTexture_r87pb")
 
 [node name="Wall2" type="StaticBody2D" parent="."]
@@ -30,7 +29,6 @@ scale = Vector2(0.496483, 0.853794)
 shape = SubResource("RectangleShape2D_7ad7j")
 
 [node name="Wall" type="Sprite2D" parent="Wall2"]
-scale = Vector2(1, 1)
 texture = SubResource("CanvasTexture_r87pb")
 
 [node name="Wall3" type="StaticBody2D" parent="."]
@@ -44,5 +42,4 @@ scale = Vector2(0.496483, 0.853794)
 shape = SubResource("RectangleShape2D_7ad7j")
 
 [node name="Wall" type="Sprite2D" parent="Wall3"]
-scale = Vector2(1, 1)
 texture = SubResource("CanvasTexture_r87pb")
