@@ -34,7 +34,6 @@ scale = Vector2(16, -648)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leyline of the void"]
 position = Vector2(-2, 0.00617284)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_4mnou")
 
 [node name="Walls" parent="." instance=ExtResource("2_tsk5u")]
