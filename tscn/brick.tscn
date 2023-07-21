@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://sq4d6ff1vlpp"]
+
+[ext_resource type="Script" path="res://tscn/brick.gd" id="1_xsflf"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5w07t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1chg1"]
+size = Vector2(100, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xo0p"]
+size = Vector2(100, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7hr4"]
+size = Vector2(4, 20.125)
+
+[node name="Brick" type="Node2D"]
+script = ExtResource("1_xsflf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(100, 30)
+texture = SubResource("CanvasTexture_5w07t")
+
+[node name="Up" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
+position = Vector2(0, -12.5)
+shape = SubResource("RectangleShape2D_1chg1")
+
+[node name="Down" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
+position = Vector2(0, 12.5)
+shape = SubResource("RectangleShape2D_7xo0p")
+
+[node name="Left" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+position = Vector2(-48, 0)
+shape = SubResource("RectangleShape2D_d7hr4")
+
+[node name="Right" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+position = Vector2(48, 0)
+shape = SubResource("RectangleShape2D_d7hr4")
+
+[connection signal="area_entered" from="Up" to="." method="_on_up_area_entered"]

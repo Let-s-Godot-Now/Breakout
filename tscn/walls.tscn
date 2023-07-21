@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs60umo1hhc7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ad7j"]
+size = Vector2(2.01417, 1.17124)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_r87pb"]
+
+[node name="Walls" type="Node2D"]
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(0, 324)
+scale = Vector2(16, -648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-5.0643e-07, 2.98023e-08)
+scale = Vector2(0.496483, 0.853794)
+shape = SubResource("RectangleShape2D_7ad7j")
+
+[node name="Wall" type="Sprite2D" parent="Wall"]
+scale = Vector2(1, 1)
+texture = SubResource("CanvasTexture_r87pb")
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2(1152, 328)
+scale = Vector2(16, -648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(-5.0643e-07, 2.98023e-08)
+scale = Vector2(0.496483, 0.853794)
+shape = SubResource("RectangleShape2D_7ad7j")
+
+[node name="Wall" type="Sprite2D" parent="Wall2"]
+scale = Vector2(1, 1)
+texture = SubResource("CanvasTexture_r87pb")
+
+[node name="Wall3" type="StaticBody2D" parent="."]
+position = Vector2(576, 3.05176e-05)
+rotation = -1.5708
+scale = Vector2(16.6531, -1168)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3"]
+position = Vector2(-5.0643e-07, 2.98023e-08)
+scale = Vector2(0.496483, 0.853794)
+shape = SubResource("RectangleShape2D_7ad7j")
+
+[node name="Wall" type="Sprite2D" parent="Wall3"]
+scale = Vector2(1, 1)
+texture = SubResource("CanvasTexture_r87pb")
