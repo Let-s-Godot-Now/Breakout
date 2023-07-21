@@ -16,7 +16,7 @@ size = Vector2(2.50001, 1.79012)
 [node name="Paddle" parent="." instance=ExtResource("1_qe3g6")]
 
 [node name="Ball" type="Node2D" parent="."]
-position = Vector2(576, 432)
+position = Vector2(576, 575)
 scale = Vector2(28.1249, 28.125)
 
 [node name="Ball" type="Sprite2D" parent="Ball"]
@@ -34,7 +34,6 @@ scale = Vector2(16, -648)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leyline of the void"]
 position = Vector2(-2, 0.00617284)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_4mnou")
 
 [node name="Walls" parent="." instance=ExtResource("2_tsk5u")]
