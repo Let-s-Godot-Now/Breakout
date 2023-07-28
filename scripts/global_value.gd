@@ -7,3 +7,5 @@ enum Mode{
     DIFFICULT,
 }
 var global_mode: Mode = Mode.NORMAL
+
+var score = 0
