@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bulwt8c8ye2kp"]
+[gd_scene load_steps=4 format=3 uid="uid://bulwt8c8ye2kp"]
+
+[ext_resource type="Script" path="res://scripts/ball.gd" id="1_sbad2"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_1vgdu"]
 
@@ -8,6 +10,7 @@ radius = 0.573315
 [node name="Ball" type="Node2D"]
 position = Vector2(576, 435)
 scale = Vector2(28.1249, 28.125)
+script = ExtResource("1_sbad2")
 
 [node name="Ball" type="Sprite2D" parent="."]
 texture = SubResource("CanvasTexture_1vgdu")
@@ -16,3 +19,7 @@ texture = SubResource("CanvasTexture_1vgdu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BallArea"]
 shape = SubResource("CircleShape2D_20i1h")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+
+[connection signal="area_entered" from="BallArea" to="." method="_on_ball_area_entered"]

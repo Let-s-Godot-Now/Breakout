@@ -6,3 +6,7 @@ res://tscn/paddle.tscn
 res://scripts/global_value.gd
 res://tscn/brick.gd
 res://scripts/brick.gd
+res://scripts/ball.gd
+res://tscn/ball.tscn
+res://scripts/main.gd
+res://tscn/walls.tscn
