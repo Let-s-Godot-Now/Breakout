@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://blfvo0smpq1fl"]
+[gd_scene load_steps=5 format=3 uid="uid://blfvo0smpq1fl"]
 
 [ext_resource type="PackedScene" uid="uid://des37jbp4ogsg" path="res://tscn/paddle.tscn" id="1_qe3g6"]
-[ext_resource type="PackedScene" uid="uid://cs60umo1hhc7e" path="res://tscn/walls.tscn" id="2_tsk5u"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_1vgdu"]
 
@@ -16,7 +15,7 @@ size = Vector2(2.50001, 1.79012)
 [node name="Paddle" parent="." instance=ExtResource("1_qe3g6")]
 
 [node name="Ball" type="Node2D" parent="."]
-position = Vector2(576, 575)
+position = Vector2(576, 435)
 scale = Vector2(28.1249, 28.125)
 
 [node name="Ball" type="Sprite2D" parent="Ball"]
@@ -35,5 +34,3 @@ scale = Vector2(16, -648)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leyline of the void"]
 position = Vector2(-2, 0.00617284)
 shape = SubResource("RectangleShape2D_4mnou")
-
-[node name="Walls" parent="." instance=ExtResource("2_tsk5u")]
