@@ -1,1 +1,5 @@
 res://tscn/main.tscn
+res://tscn/brick.tscn
+res://scripts/Plane.gd
+res://scripts/panddle.gd
+res://tscn/paddle.tscn

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://des37jbp4ogsg"]
 
-[ext_resource type="Script" path="res://scripts/Plane.gd" id="1_vqg4x"]
+[ext_resource type="Script" path="res://scripts/panddle.gd" id="1_hri1r"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_o5isi"]
 
@@ -10,7 +10,7 @@ size = Vector2(0.993789, 1.14285)
 [node name="Paddle" type="CharacterBody2D"]
 position = Vector2(576, 600)
 scale = Vector2(161, 14)
-script = ExtResource("1_vqg4x")
+script = ExtResource("1_hri1r")
 
 [node name="Plane" type="Sprite2D" parent="."]
 texture = SubResource("CanvasTexture_o5isi")
