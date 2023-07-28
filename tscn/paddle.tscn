@@ -15,5 +15,7 @@ script = ExtResource("1_hri1r")
 [node name="Plane" type="Sprite2D" parent="."]
 texture = SubResource("CanvasTexture_o5isi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Up" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
 shape = SubResource("RectangleShape2D_e8q0q")
