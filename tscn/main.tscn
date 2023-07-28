@@ -1,11 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://blfvo0smpq1fl"]
+[gd_scene load_steps=4 format=3 uid="uid://blfvo0smpq1fl"]
 
 [ext_resource type="PackedScene" uid="uid://des37jbp4ogsg" path="res://tscn/paddle.tscn" id="1_qe3g6"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_1vgdu"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_20i1h"]
-radius = 0.573315
+[ext_resource type="PackedScene" uid="uid://bulwt8c8ye2kp" path="res://tscn/ball.tscn" id="2_6luyj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mnou"]
 size = Vector2(2.50001, 1.79012)
@@ -14,17 +10,7 @@ size = Vector2(2.50001, 1.79012)
 
 [node name="Paddle" parent="." instance=ExtResource("1_qe3g6")]
 
-[node name="Ball" type="Node2D" parent="."]
-position = Vector2(576, 435)
-scale = Vector2(28.1249, 28.125)
-
-[node name="Ball" type="Sprite2D" parent="Ball"]
-texture = SubResource("CanvasTexture_1vgdu")
-
-[node name="BallArea" type="Area2D" parent="Ball"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball/BallArea"]
-shape = SubResource("CircleShape2D_20i1h")
+[node name="Ball" parent="." instance=ExtResource("2_6luyj")]
 
 [node name="leyline of the void" type="StaticBody2D" parent="."]
 position = Vector2(576, 640)
