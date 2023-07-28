@@ -1,5 +1,10 @@
 res://tscn/main.tscn
+<<<<<<< HEAD
 res://tscn/brick.tscn
 res://scripts/Plane.gd
 res://scripts/panddle.gd
 res://tscn/paddle.tscn
+=======
+res://scripts/global_value.gd
+res://tscn/brick.tscn
+>>>>>>> 5a3174db3635ebf471de82bdfe1a44926f36516e
