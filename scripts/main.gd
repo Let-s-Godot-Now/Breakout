@@ -5,5 +5,5 @@ extends Node2D
 func _ready():
 	ball.reset()
 
-func _process(delta):
-	pass
+# func _process(delta):
+# 	pass

@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8q0q"]
 size = Vector2(0.993789, 1.14285)
 
-[node name="Paddle" type="CharacterBody2D"]
+[node name="Paddle" type="Node2D"]
 position = Vector2(576, 600)
 scale = Vector2(161, 14)
 script = ExtResource("1_hri1r")

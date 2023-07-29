@@ -1,12 +1,7 @@
-res://tscn/main.tscn
+res://tscn/walls.tscn
 res://tscn/paddle.tscn
+res://tscn/main.tscn
+res://tscn/boom_particles.tscn
 res://tscn/brick.tscn
 res://tscn/ball.tscn
-res://tscn/walls.tscn
-res://scripts/brick.gd
-res://scripts/ball.gd
-res://scripts/global_value.gd
-res://scripts/main.gd
-res://scripts/panddle.gd
-res://scripts/Plane.gd
-res://tscn/boom_particles.tscn
+res://scripts/bricks_gen.gd

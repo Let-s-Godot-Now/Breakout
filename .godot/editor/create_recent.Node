@@ -1,9 +1,9 @@
+VisibleOnScreenNotifier2D
+Node2D
 AudioStreamPlayer2D
 Label
 CPUParticles2D
 Area2D
-Node2D
-VisibleOnScreenNotifier2D
 CollisionShape2D
 Sprite2D
 StaticBody2D
