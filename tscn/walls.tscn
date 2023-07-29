@@ -7,7 +7,7 @@ size = Vector2(2.01417, 1.17124)
 
 [node name="Walls" type="Node2D"]
 
-[node name="Wall" type="StaticBody2D" parent="."]
+[node name="Wall" type="Node2D" parent="."]
 position = Vector2(0, 324)
 scale = Vector2(16, -648)
 
@@ -21,7 +21,7 @@ position = Vector2(-5.0643e-07, 2.98023e-08)
 scale = Vector2(0.496483, 0.853794)
 shape = SubResource("RectangleShape2D_7ad7j")
 
-[node name="Wall2" type="StaticBody2D" parent="."]
+[node name="Wall2" type="Node2D" parent="."]
 position = Vector2(1152, 328)
 scale = Vector2(16, -648)
 
@@ -35,7 +35,7 @@ position = Vector2(0, 5.96046e-08)
 scale = Vector2(0.496483, 0.853794)
 shape = SubResource("RectangleShape2D_7ad7j")
 
-[node name="Wall3" type="StaticBody2D" parent="."]
+[node name="Wall3" type="Node2D" parent="."]
 position = Vector2(576, 3.05176e-05)
 rotation = -1.5708
 scale = Vector2(16.6531, -1168)
