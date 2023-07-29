@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var colli_shape = get_node("BallArea/CollisionShape2D")
+@onready var colli_shape = $BallArea/CollisionShape2D
 
 var speed = 600
 var velocity = Vector2.ZERO

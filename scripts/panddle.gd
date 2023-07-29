@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var plane = get_node("Plane")
+@onready var plane = $Plane
 
 var speed = 500
 var screen_size = Vector2.ZERO
