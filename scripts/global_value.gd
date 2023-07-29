@@ -1,6 +1,6 @@
 extends Node
 
-# ��Ϸ�Ѷ�
+# 游戏难度
 enum Mode {
 	EASY,
 	NORMAL,
