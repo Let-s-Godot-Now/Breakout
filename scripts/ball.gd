@@ -6,7 +6,7 @@ extends Node2D
 var knock_sound1 = preload("res://res/audio/ball_knock_1.ogg")
 var knock_sound2 = preload("res://res/audio/ball_knock_2.ogg")
 
-var speed = 600
+@export var speed = 600
 var velocity = Vector2.ZERO
 
 

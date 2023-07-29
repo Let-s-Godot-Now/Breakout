@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://blfvo0smpq1fl"]
+[gd_scene load_steps=8 format=3 uid="uid://blfvo0smpq1fl"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_j2bth"]
 [ext_resource type="PackedScene" uid="uid://des37jbp4ogsg" path="res://tscn/paddle.tscn" id="1_qe3g6"]
+[ext_resource type="Script" path="res://scripts/debugger.gd" id="2_1vkrt"]
 [ext_resource type="PackedScene" uid="uid://bb7ybmyxg3tco" path="res://tscn/ball.tscn" id="2_6luyj"]
 [ext_resource type="PackedScene" uid="uid://cs60umo1hhc7e" path="res://tscn/walls.tscn" id="2_tsk5u"]
 [ext_resource type="Script" path="res://scripts/bricks_gen.gd" id="5_xc7pk"]
@@ -12,9 +13,14 @@ size = Vector2(2.50001, 1.79012)
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_j2bth")
 
+[node name="Debugger" type="Node" parent="."]
+script = ExtResource("2_1vkrt")
+
 [node name="Paddle" parent="." instance=ExtResource("1_qe3g6")]
+scale = Vector2(150, 14)
 
 [node name="Ball" parent="." instance=ExtResource("2_6luyj")]
+scale = Vector2(30, 30)
 
 [node name="leyline of the void" type="Area2D" parent="."]
 position = Vector2(576, 640)
@@ -29,4 +35,4 @@ shape = SubResource("RectangleShape2D_4mnou")
 
 [node name="Bricks" type="Node2D" parent="."]
 script = ExtResource("5_xc7pk")
-brick_vert_gen_num = 5
+brick_vert_gen_num = 1
