@@ -21,5 +21,7 @@ texture = SubResource("CanvasTexture_1vgdu")
 shape = SubResource("CircleShape2D_20i1h")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 15
+scale_amount_max = 10.0
 
 [connection signal="area_entered" from="BallArea" to="." method="_on_ball_area_entered"]

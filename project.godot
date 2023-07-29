@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 GlobalValue="*res://scripts/global_value.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/vsync/vsync_mode=0
+
 [input]
 
 faster_shift={
