@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_j2bth"]
 [ext_resource type="PackedScene" uid="uid://des37jbp4ogsg" path="res://tscn/paddle.tscn" id="1_qe3g6"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://bulwt8c8ye2kp" path="res://tscn/ball.tscn" id="2_6luyj"]
+=======
+[ext_resource type="PackedScene" path="res://tscn/ball.tscn" id="2_6luyj"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://cs60umo1hhc7e" path="res://tscn/walls.tscn" id="2_tsk5u"]
 [ext_resource type="PackedScene" uid="uid://sq4d6ff1vlpp" path="res://tscn/brick.tscn" id="4_po44w"]
 
