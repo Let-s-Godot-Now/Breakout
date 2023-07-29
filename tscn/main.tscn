@@ -27,76 +27,76 @@ shape = SubResource("RectangleShape2D_4mnou")
 
 [node name="Walls" parent="." instance=ExtResource("2_tsk5u")]
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Bricks" type="Node2D" parent="."]
 
-[node name="Brick" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(262, 87)
 
-[node name="Brick2" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick2" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(139, 87)
 
-[node name="Brick3" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick3" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(262, 151)
 
-[node name="Brick4" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick4" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(139, 151)
 
-[node name="Brick5" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick5" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(639, 87)
 
-[node name="Brick6" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick6" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(516, 87)
 
-[node name="Brick7" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick7" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(639, 151)
 
-[node name="Brick8" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick8" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(516, 151)
 
-[node name="Brick9" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick9" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(993, 87)
 
-[node name="Brick10" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick10" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(870, 87)
 
-[node name="Brick11" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick11" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(993, 151)
 
-[node name="Brick12" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick12" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(870, 151)
 
-[node name="Brick13" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick13" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(262, 221)
 
-[node name="Brick14" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick14" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(139, 221)
 
-[node name="Brick15" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick15" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(262, 285)
 
-[node name="Brick16" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick16" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(139, 285)
 
-[node name="Brick17" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick17" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(639, 221)
 
-[node name="Brick18" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick18" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(516, 221)
 
-[node name="Brick19" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick19" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(639, 285)
 
-[node name="Brick20" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick20" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(516, 285)
 
-[node name="Brick21" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick21" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(993, 221)
 
-[node name="Brick22" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick22" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(870, 221)
 
-[node name="Brick23" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick23" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(993, 285)
 
-[node name="Brick24" parent="Node2D" instance=ExtResource("4_po44w")]
+[node name="Brick24" parent="Bricks" instance=ExtResource("4_po44w")]
 position = Vector2(870, 285)
