@@ -15,6 +15,7 @@ script = ExtResource("1_j2bth")
 
 [node name="Debugger" type="Node" parent="."]
 script = ExtResource("2_1vkrt")
+is_debug_suitale = true
 
 [node name="Paddle" parent="." instance=ExtResource("1_qe3g6")]
 scale = Vector2(150, 14)
@@ -35,4 +36,5 @@ shape = SubResource("RectangleShape2D_4mnou")
 
 [node name="Bricks" type="Node2D" parent="."]
 script = ExtResource("5_xc7pk")
+brick_horiz_gen_num = 3
 brick_vert_gen_num = 1
