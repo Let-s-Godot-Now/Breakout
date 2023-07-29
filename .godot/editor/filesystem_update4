@@ -10,3 +10,4 @@ res://scripts/main.gd
 res://scripts/panddle.gd
 res://scripts/Plane.gd
 res://tscn/boom_particles.tscn
+res://scripts/bricks_gen.gd
