@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=4 format=3 uid="uid://bulwt8c8ye2kp"]
-=======
 [gd_scene load_steps=4 format=3 uid="uid://bb7ybmyxg3tco"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://scripts/ball.gd" id="1_sbad2"]
 
@@ -27,5 +23,8 @@ shape = SubResource("CircleShape2D_20i1h")
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 amount = 15
 scale_amount_max = 10.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = 5.0
 
 [connection signal="area_entered" from="BallArea" to="." method="_on_ball_area_entered"]
