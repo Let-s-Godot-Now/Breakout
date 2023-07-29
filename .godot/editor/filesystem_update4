@@ -5,3 +5,7 @@ res://tscn/boom_particles.tscn
 res://tscn/brick.tscn
 res://tscn/ball.tscn
 res://scripts/bricks_gen.gd
+res://scripts/ball.gd
+res://scripts/brick.gd
+res://scripts/main.gd
+res://scripts/panddle.gd
