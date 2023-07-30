@@ -13,7 +13,12 @@ func _ready():
 	plane_size.x *= scale.x
 
 
+func reset():
+	position.x = 576
+
+
 func _process(delta):
+	# Paddle L&R movement
 	if Input.is_action_pressed("move_left"):
 		if Input.is_action_pressed("faster_shift"):
 			position.x -= speed * delta * 2
