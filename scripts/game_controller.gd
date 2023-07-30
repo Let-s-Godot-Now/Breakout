@@ -16,6 +16,7 @@ func update_level():
 	GlobalValue.score = 0
 	ball.reset()
 	paddle.reset()
+	# 砖块数量归位
 	if bricks.brick_vert_gen_num > max_vert_num or bricks.brick_horiz_gen_num > max_horiz_num:
 		bricks.brick_vert_gen_num = mem_start_vert_gen_num
 		bricks.brick_horiz_gen_num = mem_start_horiz_gen_num
