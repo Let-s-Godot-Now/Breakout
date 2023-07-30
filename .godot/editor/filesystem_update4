@@ -7,3 +7,6 @@ res://tscn/brick.tscn
 res://scripts/debugger.gd
 res://scripts/main.gd
 res://scripts/ball.gd
+res://scripts/brick.gd
+res://scripts/global_value.gd
+res://scripts/panddle.gd

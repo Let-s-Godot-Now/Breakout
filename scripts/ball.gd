@@ -33,6 +33,7 @@ func _on_ball_area_entered(area: Area2D):
 			bounce(0)
 		"leyline of the void":
 			reset()
+			$"../Paddle".reset()
 	if area.get_parent().get_parent() == brick_arr:
 		var particles = load("res://tscn/boom_particles.tscn").instantiate()
 		area.get_parent().get_parent().add_child(particles)

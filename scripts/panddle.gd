@@ -12,6 +12,8 @@ func _ready():
 	plane_size = plane.get_rect().size
 	plane_size.x *= scale.x
 
+func reset():
+	position.x = 576
 
 func _process(delta):
 	if Input.is_action_pressed("move_left"):
