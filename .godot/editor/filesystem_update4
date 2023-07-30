@@ -10,3 +10,5 @@ res://scripts/ball.gd
 res://scripts/brick.gd
 res://scripts/global_value.gd
 res://scripts/panddle.gd
+res://scripts/paddle.gd
+res://scripts/game_controller.gd
