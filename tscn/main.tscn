@@ -19,6 +19,7 @@ script = ExtResource("2_pkibg")
 
 [node name="Debugger" type="Node" parent="GameController"]
 script = ExtResource("2_1vkrt")
+is_debug_suitale = true
 
 [node name="Paddle" parent="." instance=ExtResource("1_qe3g6")]
 scale = Vector2(200, 14)
