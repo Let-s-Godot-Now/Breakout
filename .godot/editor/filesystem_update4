@@ -1,8 +1,9 @@
-res://scripts/main.gd
+res://scripts/bricks_gen.gd
 res://tscn/walls.tscn
 res://tscn/paddle.tscn
 res://tscn/main.tscn
 res://tscn/boom_particles.tscn
 res://tscn/brick.tscn
-res://scripts/global_value.gd
 res://scripts/debugger.gd
+res://scripts/main.gd
+res://scripts/ball.gd
