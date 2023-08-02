@@ -1,14 +1,8 @@
-res://scripts/bricks_gen.gd
 res://tscn/walls.tscn
 res://tscn/paddle.tscn
 res://tscn/main.tscn
 res://tscn/boom_particles.tscn
 res://tscn/brick.tscn
-res://scripts/debugger.gd
-res://scripts/main.gd
+res://tscn/ball.tscn
 res://scripts/ball.gd
-res://scripts/brick.gd
 res://scripts/global_value.gd
-res://scripts/panddle.gd
-res://scripts/paddle.gd
-res://scripts/game_controller.gd

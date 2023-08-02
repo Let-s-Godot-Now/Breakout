@@ -8,6 +8,9 @@ var plane_size = Vector2.ZERO
 
 
 func _ready():
+	set_clamp()
+
+func set_clamp():
 	screen_size = get_viewport_rect().size
 	plane_size = plane.get_rect().size
 	plane_size.x *= scale.x

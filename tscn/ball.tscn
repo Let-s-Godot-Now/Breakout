@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bb7ybmyxg3tco"]
 
 [ext_resource type="Script" path="res://scripts/ball.gd" id="1_sbad2"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_1vgdu"]
+[ext_resource type="Texture2D" uid="uid://dtgi5igekl3aw" path="res://assests/ball3.png" id="2_iopd2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_20i1h"]
 radius = 0.573315
@@ -12,9 +11,6 @@ position = Vector2(576, 435)
 scale = Vector2(28.1249, 28.125)
 script = ExtResource("1_sbad2")
 
-[node name="Ball" type="Sprite2D" parent="."]
-texture = SubResource("CanvasTexture_1vgdu")
-
 [node name="BallArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BallArea"]
@@ -23,12 +19,18 @@ shape = SubResource("CircleShape2D_20i1h")
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 amount = 15
 scale_amount_max = 10.0
+color = Color(0.33, 0.0935, 0, 1)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 volume_db = 5.0
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 scale = Vector2(0.049778, 0.0497778)
+
+[node name="Ball" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.138844, 0.138844)
+texture = ExtResource("2_iopd2")
 
 [connection signal="area_entered" from="BallArea" to="." method="_on_ball_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="reset"]
