@@ -13,7 +13,7 @@ var velocity = Vector2.ZERO
 func _process(delta):
 	if GlobalValue.start_game == true:
 		position += velocity * delta
-		rotation_degrees += 10
+		# rotation_degrees += 10
 
 
 func reset():

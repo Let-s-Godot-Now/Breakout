@@ -1,8 +1,8 @@
-res://scripts/debugger.gd
-res://scripts/ball.gd
-res://scripts/game_controller.gd
 res://tscn/walls.tscn
 res://tscn/paddle.tscn
 res://tscn/main.tscn
 res://tscn/boom_particles.tscn
 res://tscn/brick.tscn
+res://tscn/ball.tscn
+res://scripts/ball.gd
+res://scripts/global_value.gd

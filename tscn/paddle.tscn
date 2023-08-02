@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://des37jbp4ogsg"]
+[gd_scene load_steps=5 format=3 uid="uid://des37jbp4ogsg"]
 
 [ext_resource type="Script" path="res://scripts/paddle.gd" id="1_knicu"]
+[ext_resource type="Texture2D" uid="uid://bk0kvjfubjr6u" path="res://assests/paddle.png" id="2_7j6rf"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_o5isi"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_5qsq7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8q0q"]
 size = Vector2(0.993789, 1.14285)
@@ -13,9 +14,18 @@ scale = Vector2(161, 14)
 script = ExtResource("1_knicu")
 
 [node name="Plane" type="Sprite2D" parent="."]
-texture = SubResource("CanvasTexture_o5isi")
+visible = false
+position = Vector2(-0.0465838, 0.756695)
+scale = Vector2(-0.0310559, 0.0580412)
+texture = SubResource("CanvasTexture_5qsq7")
 
 [node name="Up" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
 shape = SubResource("RectangleShape2D_e8q0q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 0.64286)
+scale = Vector2(0.0625, 0.616071)
+texture = ExtResource("2_7j6rf")

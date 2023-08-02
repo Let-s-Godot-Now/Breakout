@@ -19,13 +19,19 @@ script = ExtResource("2_pkibg")
 
 [node name="Debugger" type="Node" parent="GameController"]
 script = ExtResource("2_1vkrt")
-is_debug_suitale = true
 
-[node name="Paddle" parent="." instance=ExtResource("1_qe3g6")]
-scale = Vector2(200, 14)
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1160.0
+offset_bottom = 652.0
+color = Color(0.8, 0.431373, 0.321569, 1)
 
 [node name="Ball" parent="." instance=ExtResource("2_6luyj")]
-scale = Vector2(50, 50)
+scale = Vector2(50, 50.4425)
+
+[node name="Walls" parent="." instance=ExtResource("2_tsk5u")]
+
+[node name="Paddle" parent="." instance=ExtResource("1_qe3g6")]
+scale = Vector2(142.857, 10)
 
 [node name="leyline of the void" type="Area2D" parent="."]
 position = Vector2(576, 640)
@@ -35,8 +41,6 @@ scale = Vector2(16, -648)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leyline of the void"]
 position = Vector2(-2, 0.00617284)
 shape = SubResource("RectangleShape2D_4mnou")
-
-[node name="Walls" parent="." instance=ExtResource("2_tsk5u")]
 
 [node name="Bricks" type="Node2D" parent="."]
 script = ExtResource("5_xc7pk")
