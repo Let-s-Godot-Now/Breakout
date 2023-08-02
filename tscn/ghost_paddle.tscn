@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://2ur5lhb210c7"]
+
+[ext_resource type="Texture2D" uid="uid://bk0kvjfubjr6u" path="res://assests/paddle.png" id="1_20hph"]
+[ext_resource type="Script" path="res://scripts/ghost_hide.gd" id="1_vq2xa"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4sbll"]
+
+[node name="Paddle" type="Node2D"]
+position = Vector2(576, 600)
+scale = Vector2(161, 14)
+script = ExtResource("1_vq2xa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_4sbll")
+position = Vector2(0, 0.499996)
+scale = Vector2(0.043618, 0.429949)
+texture = ExtResource("1_20hph")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
