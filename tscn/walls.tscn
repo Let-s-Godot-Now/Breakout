@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cs60umo1hhc7e"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_r87pb"]
+[ext_resource type="Texture2D" uid="uid://cqog52s71iqpk" path="res://assests/wall.png" id="1_mb0mi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ad7j"]
 size = Vector2(2.01417, 1.17124)
@@ -11,9 +11,6 @@ size = Vector2(2.01417, 1.17124)
 position = Vector2(0, 324)
 scale = Vector2(16, -648)
 
-[node name="Wall" type="Sprite2D" parent="Wall"]
-texture = SubResource("CanvasTexture_r87pb")
-
 [node name="Right" type="Area2D" parent="Wall"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/Right"]
@@ -21,12 +18,14 @@ position = Vector2(-5.0643e-07, 2.98023e-08)
 scale = Vector2(0.496483, 0.853794)
 shape = SubResource("RectangleShape2D_7ad7j")
 
+[node name="Wall4" type="Sprite2D" parent="Wall"]
+texture_filter = 1
+scale = Vector2(0.465, 0.0629012)
+texture = ExtResource("1_mb0mi")
+
 [node name="Wall2" type="Node2D" parent="."]
 position = Vector2(1152, 328)
 scale = Vector2(16, -648)
-
-[node name="Wall" type="Sprite2D" parent="Wall2"]
-texture = SubResource("CanvasTexture_r87pb")
 
 [node name="Left" type="Area2D" parent="Wall2"]
 
@@ -35,13 +34,15 @@ position = Vector2(0, 5.96046e-08)
 scale = Vector2(0.496483, 0.853794)
 shape = SubResource("RectangleShape2D_7ad7j")
 
+[node name="Wall4" type="Sprite2D" parent="Wall2"]
+texture_filter = 1
+scale = Vector2(0.465, 0.0629012)
+texture = ExtResource("1_mb0mi")
+
 [node name="Wall3" type="Node2D" parent="."]
 position = Vector2(576, 3.05176e-05)
 rotation = -1.5708
 scale = Vector2(16.6531, -1168)
-
-[node name="Wall" type="Sprite2D" parent="Wall3"]
-texture = SubResource("CanvasTexture_r87pb")
 
 [node name="Down" type="Area2D" parent="Wall3"]
 
@@ -49,3 +50,8 @@ texture = SubResource("CanvasTexture_r87pb")
 position = Vector2(-5.06421e-07, 5.96046e-08)
 scale = Vector2(0.496483, 0.853794)
 shape = SubResource("RectangleShape2D_7ad7j")
+
+[node name="Wall4" type="Sprite2D" parent="Wall3"]
+texture_filter = 1
+scale = Vector2(0.465, 0.0624903)
+texture = ExtResource("1_mb0mi")

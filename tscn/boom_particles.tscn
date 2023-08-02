@@ -21,5 +21,6 @@ angular_velocity_min = -720.0
 angular_velocity_max = 146.94
 orbit_velocity_max = 1.0
 scale_amount_min = 5.0
-scale_amount_max = 5.0
+scale_amount_max = 10.0
 scale_amount_curve = SubResource("Curve_dgak8")
+color = Color(0.501961, 0.141176, 0, 1)
