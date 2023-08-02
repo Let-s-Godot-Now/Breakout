@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://des37jbp4ogsg"]
 
 [ext_resource type="Script" path="res://scripts/paddle.gd" id="1_knicu"]
-[ext_resource type="Texture2D" uid="uid://bk0kvjfubjr6u" path="res://assests/paddle.png" id="2_7j6rf"]
+[ext_resource type="Texture2D" path="res://assests/paddle.png" id="2_7j6rf"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_5qsq7"]
 
