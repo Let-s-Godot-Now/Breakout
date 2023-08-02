@@ -6,3 +6,5 @@ res://tscn/brick.tscn
 res://tscn/ball.tscn
 res://scripts/ball.gd
 res://scripts/global_value.gd
+res://scripts/game_controller.gd
+res://scripts/paddle.gd
