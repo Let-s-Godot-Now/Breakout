@@ -11,7 +11,7 @@ func _ready():
 	gen_bricks()
 
 
-func gen_bricks():
+func gen_bricks() -> void:
 	var screen_size := get_viewport_rect().size
 	var horiz_num = brick_horiz_gen_num + 1
 	var vert_num = brick_vert_gen_num + 1

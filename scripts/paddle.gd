@@ -44,9 +44,10 @@ func _process(delta):
 	position.x = clamp(position.x, plane_size.x / 2, screen_size.x - plane_size.x / 2)
 
 func ghost_gen():
-	if Input.is_action_pressed("faster_shift"):
-		var paddle_tscn = paddle.instantiate()
-		paddle_tscn.position = position
-		paddle_tscn.get_node("Sprite2D").modulate.a = 0.7
-		get_parent().add_child(paddle_tscn)
-		print(1)
+	if Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
+		if Input.is_action_pressed("faster_shift"):
+			var paddle_tscn = paddle.instantiate()
+			paddle_tscn.position = position
+			paddle_tscn.scale.x = scale.x
+			paddle_tscn.get_node("Sprite2D").modulate.a = 0.7
+			get_parent().add_child(paddle_tscn)
