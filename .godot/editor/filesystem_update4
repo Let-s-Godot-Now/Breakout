@@ -4,9 +4,8 @@ res://tscn/main.tscn
 res://tscn/boom_particles.tscn
 res://tscn/brick.tscn
 res://tscn/ball.tscn
-res://scripts/paddle.gd
-res://scripts/global_value.gd
-res://scripts/bricks_gen.gd
 res://tscn/ghost_paddle.tscn
-res://scripts/brick.gd
-res://scripts/ghost_hide.gd
+res://scripts/main.gd
+res://scripts/paddle.gd
+res://scripts/ball.gd
+res://scripts/global_value.gd

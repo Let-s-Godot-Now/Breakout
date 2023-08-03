@@ -3,6 +3,8 @@ extends Node2D
 @onready var colli_shape = $BallArea/CollisionShape2D
 @onready var brick_arr = $"../Bricks"
 @onready var paddle = $"../Paddle"
+@onready var animation_player = $AnimationPlayer
+
 
 var knock_sound1 = preload("res://res/audio/ball_knock_1.ogg")
 var knock_sound2 = preload("res://res/audio/ball_knock_2.ogg")
@@ -60,3 +62,5 @@ func bounce(dir, degree):
 	dir += randf_range(-PI / degree, PI / degree)
 	rotation = dir
 	velocity = Vector2(1, 0).rotated(dir) * speed
+	animation_player.play("ball_bounce")
+
