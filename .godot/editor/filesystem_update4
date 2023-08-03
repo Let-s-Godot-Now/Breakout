@@ -9,3 +9,9 @@ res://scripts/main.gd
 res://scripts/paddle.gd
 res://scripts/ball.gd
 res://scripts/global_value.gd
+res://scripts/brick.gd
+res://scripts/bricks_gen.gd
+res://scripts/debugger.gd
+res://scripts/game_controller.gd
+res://scripts/ghost_hide.gd
+res://scripts/Plane.gd

@@ -1,8 +1,8 @@
 extends Node
 
-@onready var ball = $"../../Ball"
-@onready var paddle = $"../../Paddle"
-@onready var bricks = $"../../Bricks"
+@onready var ball := $"../../Ball"
+@onready var paddle := $"../../Paddle"
+@onready var bricks := $"../../Bricks"
 
 @export var is_debug_suitale: bool = false
 
