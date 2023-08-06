@@ -1,9 +1,7 @@
 extends Node2D
 
-@onready var ball = get_node("Ball")
+@onready var ball := $Ball
+
 
 func _ready():
 	ball.reset()
-
-# func _process(delta):
-# 	pass

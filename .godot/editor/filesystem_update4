@@ -5,7 +5,10 @@ res://tscn/boom_particles.tscn
 res://tscn/brick.tscn
 res://tscn/ball.tscn
 res://tscn/ghost_paddle.tscn
-res://scripts/main.gd
-res://scripts/paddle.gd
-res://scripts/ball.gd
+res://scripts/camera.gd
 res://scripts/global_value.gd
+res://scripts/debugger.gd
+res://scripts/bricks_gen.gd
+res://scripts/game_controller.gd
+res://scripts/ghost_hide.gd
+res://scripts/ball.gd

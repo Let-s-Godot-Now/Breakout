@@ -1,15 +1,16 @@
 extends Node
 
-@onready var ball = $"../Ball"
-@onready var paddle = $"../Paddle"
-@onready var bricks = $"../Bricks"
-# The memory var when game start
-@onready var mem_start_horiz_gen_num = bricks.brick_horiz_gen_num
-@onready var mem_start_vert_gen_num = bricks.brick_vert_gen_num
+@onready var ball := $"../Ball"
+@onready var paddle := $"../Paddle"
+@onready var bricks := $"../Bricks"
 
-@onready var default_paddle_x = paddle.scale.x
-@onready var default_ball_scale = ball.scale
-@onready var default_ball_speed = ball.speed
+# The memory var when game start
+@onready var mem_start_horiz_gen_num: int = bricks.brick_horiz_gen_num
+@onready var mem_start_vert_gen_num: int = bricks.brick_vert_gen_num
+
+@onready var default_paddle_x: float = paddle.scale.x
+@onready var default_ball_scale: Vector2 = ball.scale
+@onready var default_ball_speed: int = ball.speed
 
 @export var max_horiz_num := 8
 @export var max_vert_num := 6
@@ -18,11 +19,9 @@ extends Node
 @export var max_speed := 1200
 
 
-func update_level():
+func update_level() -> void:
 	print("win")
 	GlobalValue.score = 0
-	ball.reset()
-	paddle.reset()
 
 	if paddle.scale.x > min_paddle_x:
 		paddle.scale.x -= 10
@@ -49,3 +48,6 @@ func update_level():
 		bricks.brick_vert_gen_num += 1
 		bricks.brick_horiz_gen_num += 1
 	bricks.gen_bricks()
+
+	ball.reset()
+	paddle.reset()
