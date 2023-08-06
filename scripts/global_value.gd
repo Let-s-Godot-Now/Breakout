@@ -13,3 +13,5 @@ var score := 0
 var total_bricks := 0
 
 var start_game := true
+
+var camera: Camera2D

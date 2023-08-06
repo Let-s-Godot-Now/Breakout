@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://blfvo0smpq1fl"]
+[gd_scene load_steps=10 format=3 uid="uid://blfvo0smpq1fl"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_j2bth"]
 [ext_resource type="PackedScene" uid="uid://des37jbp4ogsg" path="res://tscn/paddle.tscn" id="1_qe3g6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/game_controller.gd" id="2_pkibg"]
 [ext_resource type="PackedScene" uid="uid://cs60umo1hhc7e" path="res://tscn/walls.tscn" id="2_tsk5u"]
 [ext_resource type="Script" path="res://scripts/bricks_gen.gd" id="5_xc7pk"]
+[ext_resource type="Script" path="res://scripts/camera.gd" id="8_chxiy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mnou"]
 size = Vector2(2.50001, 1.79012)
@@ -20,11 +21,11 @@ min_paddle_x = 70
 
 [node name="Debugger" type="Node" parent="GameController"]
 script = ExtResource("2_1vkrt")
-is_debug_suitale = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1160.0
 offset_bottom = 652.0
+scale = Vector2(1, 1.07)
 color = Color(0.733333, 0.392157, 0.286275, 1)
 
 [node name="Ball" parent="." instance=ExtResource("2_6luyj")]
@@ -48,3 +49,7 @@ shape = SubResource("RectangleShape2D_4mnou")
 script = ExtResource("5_xc7pk")
 brick_horiz_gen_num = 3
 brick_vert_gen_num = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+script = ExtResource("8_chxiy")

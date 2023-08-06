@@ -22,8 +22,6 @@ extends Node
 func update_level() -> void:
 	print("win")
 	GlobalValue.score = 0
-	ball.reset()
-	paddle.reset()
 
 	if paddle.scale.x > min_paddle_x:
 		paddle.scale.x -= 10
@@ -50,3 +48,6 @@ func update_level() -> void:
 		bricks.brick_vert_gen_num += 1
 		bricks.brick_horiz_gen_num += 1
 	bricks.gen_bricks()
+
+	ball.reset()
+	paddle.reset()
