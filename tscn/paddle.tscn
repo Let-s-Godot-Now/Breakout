@@ -25,6 +25,13 @@ texture = SubResource("CanvasTexture_5qsq7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PaddleNoodle"]
 shape = SubResource("RectangleShape2D_e8q0q")
 
+[node name="PaddleNoodle2" type="Area2D" parent="."]
+position = Vector2(0, 1.64286)
+scale = Vector2(0.453605, 1.85059)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaddleNoodle2"]
+shape = SubResource("RectangleShape2D_e8q0q")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 0.64286)
