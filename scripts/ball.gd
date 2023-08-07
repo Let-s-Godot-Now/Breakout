@@ -2,9 +2,9 @@ extends Node2D
 
 @onready var colli_shape: CollisionShape2D = $BallArea/CollisionShape2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var brick_arr: Node2D = $"../Bricks"
-@onready var paddle: Node2D = $"../Paddle"
-@onready var walls: Node2D = $"../Walls"
+@onready var brick_arr: Node2D = GlobalValue.bricks
+@onready var paddle: Node2D = GlobalValue.paddle
+@onready var walls: Node2D = GlobalValue.walls
 
 var knock_sound1 = preload("res://res/audio/ball_knock_1.ogg")
 var knock_sound2 = preload("res://res/audio/ball_knock_2.ogg")

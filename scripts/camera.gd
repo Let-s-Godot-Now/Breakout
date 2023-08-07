@@ -25,7 +25,7 @@ var _last_offset := Vector2(0, 0)
 
 func _ready():
 	set_process(false)
-	self.objects=[get_node("../Ball")]
+	self.objects=[GlobalValue.ball]
 	set_process(true)
 	GlobalValue.camera = self
 
@@ -51,7 +51,7 @@ func _process(delta):
 			drag_horizontal_offset = dist_from_center.x * dynamic_factor
 			drag_vertical_offset = dist_from_center.y * dynamic_factor
 
-			var max_distance: float = 0
+			# var max_distance: float = 0
 			var distance = average_pos.distance_to(Vector2(center.x, get_viewport_rect().size.y))
 
 			zoom = lerp(Vector2(0.975, 0.975), Vector2(1.025, 1.025), 1 - (distance / max_dist))

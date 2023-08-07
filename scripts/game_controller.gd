@@ -3,6 +3,7 @@ extends Node
 @onready var ball := $"../Ball"
 @onready var paddle := $"../Paddle"
 @onready var bricks := $"../Bricks"
+@onready var walls := $"../Walls"
 
 # The memory var when game start
 @onready var mem_start_horiz_gen_num: int = bricks.brick_horiz_gen_num
@@ -17,6 +18,13 @@ extends Node
 @export var min_paddle_x := 50
 @export var min_ball_x := 20
 @export var max_speed := 1200
+
+
+func _ready():
+	GlobalValue.ball = ball
+	GlobalValue.walls = walls
+	GlobalValue.paddle = paddle
+	GlobalValue.bricks = bricks
 
 
 func update_level() -> void:
