@@ -24,6 +24,25 @@ func reset() -> void:
 	velocity = Vector2.DOWN * speed
 
 
+func back2center() -> void:
+	if GlobalValue.leyline_lock == false:
+		GlobalValue.leyline_lock = true
+		velocity = Vector2.ZERO
+		GlobalValue.camera.shake(0.8, 30, 15)
+		rotation = 0
+
+		await get_tree().create_timer(1.0).timeout
+		position.y = get_viewport_rect().size.y
+		bounce(
+			position.angle_to_point(
+				Vector2(get_viewport_rect().size.x / 2, get_viewport_rect().size.y / 2)
+			),
+			9
+		)
+		GlobalValue.camera.shake(0.8, 30, 15)
+		GlobalValue.leyline_lock = false
+
+
 func _on_ball_area_entered(area: Area2D) -> void:
 	match area.name:
 		"PaddleNoodle":
@@ -39,15 +58,26 @@ func _on_ball_area_entered(area: Area2D) -> void:
 			bounce(PI, 3)
 		"Right":
 			bounce(0, 3)
-		"leyline of the void":
-			reset()
-			$"../Paddle".reset()
-			GlobalValue.camera.shake(0.8, 30, 15)
+		# "leyline of the void":
+		# 	reset()
+		# 	$"../Paddle".reset()
+		# 	# if not GlobalValue.leyline_lock:
+		# 	# 	GlobalValue.leyline_lock = true
+		# 	# 	GlobalValue.camera.shake(0.8, 30, 15)
+
+		# 	# 	await get_tree().create_timer(3.0).timeout
+		# 	# 	position.y = get_viewport_rect().size.y
+		# 	# 	velocity = Vector2.ZERO
+		# 	# 	rotation = 0
+		# 	# 	bounce(-PI / 2, 9)
+		# 	# 	GlobalValue.camera.shake(0.8, 30, 15)
+		# 	# 	GlobalValue.leyline_lock = false
 	if area.get_parent().get_parent() == brick_arr:
 		var particles = load("res://tscn/boom_particles.tscn").instantiate()
 		area.get_parent().get_parent().add_child(particles)
 		particles.position = area.get_parent().position
 		particles.get_node("Particles").emitting = true
+
 		GlobalValue.camera.shake(0.3, 30, 15)
 	elif area.get_parent().get_parent() == walls:
 		GlobalValue.camera.shake(0.3, 30, 10)

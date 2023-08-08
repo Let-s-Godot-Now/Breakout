@@ -25,7 +25,7 @@ var _last_offset := Vector2(0, 0)
 
 func _ready():
 	set_process(false)
-	self.objects=[GlobalValue.ball]
+	self.objects = [GlobalValue.ball]
 	set_process(true)
 	GlobalValue.camera = self
 
@@ -33,7 +33,7 @@ func _ready():
 func _process(delta):
 	if target:
 		follow_target(delta)
-	elif dynamic_enabled and objects != null:
+	elif dynamic_enabled and GlobalValue.leyline_lock == false and objects != null:
 		var objects_are_in_tree: bool = true
 		for x in objects:
 			if not x.is_inside_tree():
@@ -104,9 +104,10 @@ func reset_camera() -> void:
 	zoom = normal_zoom
 
 
-func start_tracking(new_target)->void:
+func start_tracking(new_target) -> void:
 	# position_soomthing_enabled=false
-	target=new_target
+	target = new_target
 	$Tween.remove_all()
-	$Tween.interpolate_property(self,"zoom",zoom,Vector2(0.8,0.8),0.8,Tween.TRANS_CUBIC,Tween.EASE_IN_OUT)
-
+	$Tween.interpolate_property(
+		self, "zoom", zoom, Vector2(0.8, 0.8), 0.8, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT
+	)

@@ -37,7 +37,7 @@ scale = Vector2(50, 50.4425)
 scale = Vector2(142.857, 10)
 
 [node name="leyline of the void" type="Area2D" parent="."]
-position = Vector2(576, 640)
+position = Vector2(576, 698)
 rotation = -1.5708
 scale = Vector2(16, -648)
 
