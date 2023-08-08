@@ -27,8 +27,8 @@ func _ready():
 	GlobalValue.paddle = paddle
 	GlobalValue.bricks = bricks
 
-	# if OS.get_name()=="Android":
-	controllers.visible=true
+	if OS.get_name()=="Android":
+		controllers.visible=true
 
 func update_level() -> void:
 	print("win")
