@@ -25,7 +25,7 @@ var _last_offset := Vector2(0, 0)
 
 func _ready():
 	set_process(false)
-	self.objects=[get_node("../Ball")]
+	self.objects = [GlobalValue.ball]
 	set_process(true)
 	GlobalValue.camera = self
 
@@ -33,7 +33,7 @@ func _ready():
 func _process(delta):
 	if target:
 		follow_target(delta)
-	elif dynamic_enabled and objects != null:
+	elif dynamic_enabled and GlobalValue.leyline_lock == false and objects != null:
 		var objects_are_in_tree: bool = true
 		for x in objects:
 			if not x.is_inside_tree():
@@ -51,7 +51,7 @@ func _process(delta):
 			drag_horizontal_offset = dist_from_center.x * dynamic_factor
 			drag_vertical_offset = dist_from_center.y * dynamic_factor
 
-			var max_distance: float = 0
+			# var max_distance: float = 0
 			var distance = average_pos.distance_to(Vector2(center.x, get_viewport_rect().size.y))
 
 			zoom = lerp(Vector2(0.975, 0.975), Vector2(1.025, 1.025), 1 - (distance / max_dist))
@@ -104,9 +104,10 @@ func reset_camera() -> void:
 	zoom = normal_zoom
 
 
-func start_tracking(new_target)->void:
+func start_tracking(new_target) -> void:
 	# position_soomthing_enabled=false
-	target=new_target
+	target = new_target
 	$Tween.remove_all()
-	$Tween.interpolate_property(self,"zoom",zoom,Vector2(0.8,0.8),0.8,Tween.TRANS_CUBIC,Tween.EASE_IN_OUT)
-
+	$Tween.interpolate_property(
+		self, "zoom", zoom, Vector2(0.8, 0.8), 0.8, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT
+	)

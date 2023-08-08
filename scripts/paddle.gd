@@ -1,6 +1,9 @@
 extends Node2D
 
 @onready var plane := $Plane
+@onready var button_a: Button = $"../Controllers/ButtonA"
+@onready var button_d = $"../Controllers/ButtonD"
+@onready var button_shift := $"../Controllers/ButtonShift"
 @onready var ghost_paddle := preload("res://tscn/ghost_paddle.tscn")
 
 @export var speed := 500
@@ -14,16 +17,15 @@ func _ready():
 
 
 func _process(delta):
-	# Paddle L&R movement
-	if Input.is_action_pressed("move_left"):
-		if Input.is_action_pressed("faster_shift"):
+	if Input.is_action_pressed("move_left") or button_a.button_pressed:
+		if Input.is_action_pressed("faster_shift") or button_shift.button_pressed:
 			position.x -= speed * delta * 2
 			rem_speed_velocity = -speed * delta * 2
 		else:
 			position.x -= speed * delta
 			rem_speed_velocity = -speed * delta
-	elif Input.is_action_pressed("move_right"):
-		if Input.is_action_pressed("faster_shift"):
+	elif Input.is_action_pressed("move_right") or button_d.button_pressed:
+		if Input.is_action_pressed("faster_shift") or button_shift.button_pressed:
 			position.x += speed * delta * 2
 			rem_speed_velocity = speed * delta * 2
 		else:
@@ -45,8 +47,13 @@ func reset() -> void:
 
 
 func ghost_gen() -> void:
-	if Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
-		if Input.is_action_pressed("faster_shift"):
+	if (
+		Input.is_action_pressed("move_left")
+		or Input.is_action_pressed("move_right")
+		or button_a.button_pressed
+		or button_d.button_pressed
+	):
+		if Input.is_action_pressed("faster_shift") or button_shift.button_pressed:
 			var ghost_paddle_tscn = ghost_paddle.instantiate()
 			ghost_paddle_tscn.position = position
 			ghost_paddle_tscn.scale.x = scale.x

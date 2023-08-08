@@ -37,7 +37,7 @@ scale = Vector2(50, 50.4425)
 scale = Vector2(142.857, 10)
 
 [node name="leyline of the void" type="Area2D" parent="."]
-position = Vector2(576, 640)
+position = Vector2(576, 698)
 rotation = -1.5708
 scale = Vector2(16, -648)
 
@@ -55,3 +55,34 @@ position = Vector2(576, 327)
 script = ExtResource("8_chxiy")
 dynamic_enabled = true
 dynamic_factor = 0.1
+
+[node name="Controllers" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 656.0
+
+[node name="ButtonA" type="Button" parent="Controllers"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 506.0
+offset_right = 148.0
+offset_bottom = 576.0
+text = "A"
+
+[node name="ButtonD" type="Button" parent="Controllers"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 506.0
+offset_right = 308.0
+offset_bottom = 576.0
+text = "D"
+
+[node name="ButtonShift" type="Button" parent="Controllers"]
+layout_mode = 0
+offset_left = 908.0
+offset_top = 506.0
+offset_right = 1053.0
+offset_bottom = 576.0
+text = "Shift"

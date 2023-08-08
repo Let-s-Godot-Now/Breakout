@@ -75,4 +75,4 @@ libraries = {
 }
 
 [connection signal="area_entered" from="BallArea" to="." method="_on_ball_area_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="reset"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="back2center"]
