@@ -4,6 +4,7 @@ extends Node
 @onready var paddle := $"../Paddle"
 @onready var bricks := $"../Bricks"
 @onready var walls := $"../Walls"
+@onready var controllers := $"../Controllers"
 
 # The memory var when game start
 @onready var mem_start_horiz_gen_num: int = bricks.brick_horiz_gen_num
@@ -26,6 +27,8 @@ func _ready():
 	GlobalValue.paddle = paddle
 	GlobalValue.bricks = bricks
 
+	# if OS.get_name()=="Android":
+	controllers.visible=true
 
 func update_level() -> void:
 	print("win")
