@@ -13,3 +13,5 @@ res://scripts/main.gd
 res://scripts/global_value.gd
 res://scripts/ghost_hide.gd
 res://scripts/pause_view.gd
+res://tscn/main_menu.tscn
+res://scripts/mian_menu.gd

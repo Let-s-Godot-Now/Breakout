@@ -1,10 +1,11 @@
-Control
-Label
-ColorRect
-CanvasLayer
-Button
-Camera2D
 AnimationPlayer
+Button
+TextureButton
+Label
+CanvasLayer
+Control
+ColorRect
+Camera2D
 Timer
 CharacterBody2D
 Sprite2D
