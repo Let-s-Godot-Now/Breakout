@@ -1,3 +1,5 @@
+res://scripts/game_controller.gd
+res://scripts/camera.gd
 res://tscn/walls.tscn
 res://tscn/paddle.tscn
 res://tscn/main.tscn
@@ -5,8 +7,11 @@ res://tscn/boom_particles.tscn
 res://tscn/brick.tscn
 res://tscn/ball.tscn
 res://tscn/ghost_paddle.tscn
-res://scripts/game_controller.gd
-res://scripts/bricks_gen.gd
-res://scripts/ghost_hide.gd
+res://scripts/ball.gd
 res://scripts/paddle.gd
+res://scripts/main.gd
 res://scripts/global_value.gd
+res://scripts/ghost_hide.gd
+res://scripts/pause_view.gd
+res://tscn/main_menu.tscn
+res://scripts/mian_menu.gd
