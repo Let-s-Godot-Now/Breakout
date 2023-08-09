@@ -1,9 +1,9 @@
 extends Node2D
 
 @onready var plane := $Plane
-@onready var button_a: Button = $"../Controllers/ButtonA"
-@onready var button_d = $"../Controllers/ButtonD"
-@onready var button_shift := $"../Controllers/ButtonShift"
+@onready var button_a: Button = $"../UICanvasLayer/Controllers/ButtonA"
+@onready var button_d = $"../UICanvasLayer/Controllers/ButtonD"
+@onready var button_shift := $"../UICanvasLayer/Controllers/ButtonShift"
 @onready var ghost_paddle := preload("res://tscn/ghost_paddle.tscn")
 
 @export var speed := 500

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://blfvo0smpq1fl"]
+[gd_scene load_steps=13 format=3 uid="uid://blfvo0smpq1fl"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_j2bth"]
 [ext_resource type="PackedScene" uid="uid://des37jbp4ogsg" path="res://tscn/paddle.tscn" id="1_qe3g6"]
@@ -8,9 +8,16 @@
 [ext_resource type="PackedScene" uid="uid://cs60umo1hhc7e" path="res://tscn/walls.tscn" id="2_tsk5u"]
 [ext_resource type="Script" path="res://scripts/bricks_gen.gd" id="5_xc7pk"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="8_chxiy"]
+[ext_resource type="Script" path="res://scripts/pause_view.gd" id="9_72pij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mnou"]
 size = Vector2(2.50001, 1.79012)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f6rbn"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_71cxi"]
+font_size = 31
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_j2bth")
@@ -56,14 +63,16 @@ script = ExtResource("8_chxiy")
 dynamic_enabled = true
 dynamic_factor = 0.1
 
-[node name="Controllers" type="Control" parent="."]
+[node name="UICanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Controllers" type="Control" parent="UICanvasLayer"]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 656.0
 
-[node name="ButtonA" type="Button" parent="Controllers"]
+[node name="ButtonA" type="Button" parent="UICanvasLayer/Controllers"]
 layout_mode = 0
 offset_left = 78.0
 offset_top = 506.0
@@ -71,7 +80,7 @@ offset_right = 148.0
 offset_bottom = 576.0
 text = "A"
 
-[node name="ButtonD" type="Button" parent="Controllers"]
+[node name="ButtonD" type="Button" parent="UICanvasLayer/Controllers"]
 layout_mode = 0
 offset_left = 238.0
 offset_top = 506.0
@@ -79,10 +88,77 @@ offset_right = 308.0
 offset_bottom = 576.0
 text = "D"
 
-[node name="ButtonShift" type="Button" parent="Controllers"]
+[node name="ButtonShift" type="Button" parent="UICanvasLayer/Controllers"]
 layout_mode = 0
 offset_left = 908.0
 offset_top = 506.0
 offset_right = 1053.0
 offset_bottom = 576.0
 text = "Shift"
+
+[node name="PauseView" type="Control" parent="UICanvasLayer"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_72pij")
+
+[node name="ColorRect" type="ColorRect" parent="UICanvasLayer/PauseView"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4)
+
+[node name="Control" type="Control" parent="UICanvasLayer/PauseView"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="l_PAUSED" type="Label" parent="UICanvasLayer/PauseView/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -64.0
+offset_right = 92.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PAUSED"
+label_settings = SubResource("LabelSettings_f6rbn")
+
+[node name="l_toggle" type="Label" parent="UICanvasLayer/PauseView/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -432.0
+offset_top = 8.0
+offset_right = 432.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CiLck tHe BUtTon AgAin 2 CoNtiNuE"
+label_settings = SubResource("LabelSettings_71cxi")
+horizontal_alignment = 1
