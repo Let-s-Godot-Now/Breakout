@@ -74,7 +74,7 @@ func _on_ball_area_entered(area: Area2D) -> void:
 				bounce(-PI / 2, 5)
 			else:
 				# 根据板子的速度反弹
-				bounce(-PI / 2 + paddle.rem_speed_velocity / 8, 9)
+				bounce(-PI / 2 + paddle.rem_speed_velocity / 10, 9)
 		"Up":
 			# 以 PI/2 的角度反弹
 			bounce(-PI / 2, 3)
